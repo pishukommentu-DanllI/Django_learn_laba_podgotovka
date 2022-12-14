@@ -1,0 +1,16 @@
+<{% extends 'app/edit.html' %}
+
+{% block title %} Halls {% endblock %}
+
+{% block content %}
+  <h2>All Halls</h2>
+
+  {% for i in Halls %}
+    <span>Name: "{{i.name}}" Info: "{{i.info}}"</span>
+    <br>
+  {% endfor %}
+
+  <div>
+    <a href="{% url 'home' %}">Home</a>
+  </div>
+{% endblock %}
